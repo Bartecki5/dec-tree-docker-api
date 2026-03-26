@@ -5,6 +5,8 @@ W pełni skonteneryzowana aplikacja webowa wykorzystująca algorytmy uczenia mas
 ## 🚀 O projekcie
 Projekt to pełny obieg danych (Data Pipeline) i architektura mikrousług. Model uczenia maszynowego jest trenowany na danych pobieranych bezpośrednio z bazy danych, a następnie udostępniany światu za pomocą szybkiego API. Wszystko zamknięte jest w bezpiecznych kontenerach.
 
+![Zrzut ekranu aplikacji](./uzycie.png)
+
 ## 🛠️ Użyte Technologie
 * **Machine Learning:** Skrypt trenujący własny model Drzewa Decyzyjnego (scikit-learn, pandas, numpy)
 * **Backend API:** Python, FastAPI, Uvicorn, Pydantic
