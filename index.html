@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Kardiolog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>🫀 Pełna Karta Pacjenta (AI)</h2>
+    
+    <div class="grid-form">
+        <div class="form-group"><label>Płeć:</label><select id="sex"><option value="M">Mężczyzna</option><option value="F">Kobieta</option></select></div>
+        <div class="form-group"><label>Wiek:</label><input type="number" id="age" value="50"></div>
+        <div class="form-group"><label>Cholesterol (mg/dl):</label><input type="number" id="cholesterol" value="220"></div>
+        <div class="form-group"><label>Cukier na czczo > 120 mg/dl:</label><select id="fastingbs"><option value="0">Nie (0)</option><option value="1">Tak (1)</option></select></div>
+        <div class="form-group"><label>Ciśnienie spoczynkowe (mm Hg):</label><input type="number" id="restingbp" value="130"></div>
+        <div class="form-group"><label>Max Tętno:</label><input type="number" id="maxhr" value="140"></div>
+        <div class="form-group"><label>Typ bólu klatki:</label><select id="chestpain"><option value="ASY">Bezobjawowy (ASY)</option><option value="ATA">Atypowy (ATA)</option><option value="NAP">Nie-dławicowy (NAP)</option><option value="TA">Typowa dławica (TA)</option></select></div>
+        <div class="form-group"><label>EKG spoczynkowe:</label><select id="restingecg"><option value="Normal">W normie (Normal)</option><option value="ST">Anomalia ST-T (ST)</option><option value="LVH">Przerost lewej komory (LVH)</option></select></div>
+        <div class="form-group"><label>Dusznica wysiłkowa:</label><select id="exangina"><option value="N">Nie (N)</option><option value="Y">Tak (Y)</option></select></div>
+        <div class="form-group"><label>Nachylenie ST (Slope):</label><select id="stslope"><option value="Flat">Płaskie (Flat)</option><option value="Up">Wznoszące (Up)</option><option value="Down">Opadające (Down)</option></select></div>
+        <div class="form-group"><label>Obniżenie ST (Oldpeak):</label><input type="number" step="0.1" id="oldpeak" value="0.0"></div>
+    </div>
+
+    <button onclick="wyslijDoAPI()">Sprawdź Diagnozę</button>
+    <div id="wynik"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

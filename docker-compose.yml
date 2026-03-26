@@ -1,0 +1,21 @@
+services:
+  # KONTENER 1: Nasza baza danych (to już znasz)
+  baza-danych:
+    image: postgres:15
+    container_name: baza-kardiologiczna
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: szpital
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  # KONTENER 2: Nasze nowe API (FastAPI)
+  api-serwer:
+    build: .
+    container_name: kardiolog-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - baza-danych
