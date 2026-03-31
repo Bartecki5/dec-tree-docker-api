@@ -35,7 +35,7 @@ print("3. Trenowanie Drzewa Decyzyjnego...")
 clf = DecisionTree(max_depth=4)
 clf.fit(X, y)
 
-#Pakietowanie (Serializacja)
+
 print("4. Konserwowanie modelu do pliku .pkl...")
 model_package  = {
     "model": clf,
@@ -43,7 +43,7 @@ model_package  = {
 }
 
 with open("heart_model.pkl", "wb") as file:
-    #Funkcja pickle.dump() zrzuciła całą tę strukturę z pamięci RAM prosto do pliku na Twoim dysku.
+    
     pickle.dump(model_package, file)
 
 print("Gotowe! Model został zapakowany i zapisany jako 'heart_model.pkl")
