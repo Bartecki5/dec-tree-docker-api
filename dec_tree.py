@@ -3,7 +3,6 @@ from collections import Counter
 import numpy as np 
 
 
-
 # entropia mierzy ile jest niepewności w danych (duzy mix = 1)
 def entropy(y):
     
