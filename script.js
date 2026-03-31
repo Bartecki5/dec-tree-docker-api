@@ -1,5 +1,5 @@
 async function wyslijDoAPI() {
-    // Zbieramy wszystkie 11 wartości z formularza
+    
     const danePacjenta = {
         Age: parseInt(document.getElementById('age').value),
         Sex: document.getElementById('sex').value,
