@@ -45,7 +45,7 @@ class PatientData(BaseModel):
     ST_Slope: str
 
 
-#To tzw. dekorator (endpoint). Mówi serwerowi: "Kiedy ktoś wyśle dane na adres internetowy kończący się na /predict, wrzuć te dane do funkcji ponizej"
+
 @app.post("/predict")
 def predict_heart_disease(patient: PatientData):
 
